@@ -19,7 +19,7 @@ def display_board(board)
 end
 
 def input_to_index(user_input)
-  index = user_input.to_i -1
+  user_input.to_i -1
 end
 
 def move(board, index, character)
@@ -27,11 +27,7 @@ def move(board, index, character)
 end
 
 def position_taken?(board, index)
-  if board[index] == "X" || board[index] == "O"
-    true
-  else
-    false
-  end
+  !(board[index].nil? || board[index] = " " || board[index] = "  ")
 end
 
 def valid_move?(board, index)
