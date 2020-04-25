@@ -17,3 +17,92 @@ def display_board(board)
   puts "-----------"
   puts "   |   |   "
 end
+
+def input_to_index(user_input)
+  index = user_input.to_i -1
+end
+
+def move(board, index, character)
+  board[index] = character
+end
+
+def position_taken?(board, index)
+  if board[index] == "X" || board[index] == "O"
+    true
+  else
+    false
+  end
+end
+
+def valid_move?(board, index)
+  if index.between?(1,9)
+    if !(board[index] == "X" || board[index] == "O")
+      true
+    else
+      false
+    end
+  else
+    false
+  end
+end
+
+def turn(board)
+  puts "Please Enter 1-9: "
+  index = input_to_index(gets.chomp)
+  if valid_move? (board, index)
+    move(board, index)
+    display_board(board)
+  else
+    turn(board, index)
+  end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+      
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
