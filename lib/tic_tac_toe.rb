@@ -9,3 +9,11 @@ WIN_COMBINATIONS = [
   [0,4,8]
   [2,4,8]
 ]
+
+def display_board(board)
+  puts "   |   |   "
+  puts "-----------"
+  puts "   |   |   "
+  puts "-----------"
+  puts "   |   |   "
+end
