@@ -37,7 +37,7 @@ end
 
 def turn_count(board)
   turn = 0
-  board.each {|index| 
+  board.each {|index|
     index == "X" || index == "O"
       turn += 1}
   end
