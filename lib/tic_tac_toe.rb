@@ -35,12 +35,12 @@ def position_taken?(board, index)
 end
 
 def valid_move?(board, index)
-  def on_board?(index) 
+  def on_board?(index)
     index.between?(0,8)
   end
 
   def position_taken?(board, index)
-    board[index] == "O" || board[index] == "X" 
+    board[index] == "O" || board[index] == "X"
   end
 
   if (on_board?i(index) == true || position_taken?(board, index) == false)
@@ -49,11 +49,11 @@ def valid_move?(board, index)
     false
   end
 end
-      
-    
 
-  
-  
+
+
+
+
     if !(board[index] == "X" || board[index] == "O")
       true
     else
